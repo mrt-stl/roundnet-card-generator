@@ -68,7 +68,7 @@ h3 {
   font-size: ${props => props.theme.fontSize.xl}
 }
 
-p, a {
+p, a, label {
   color: ${(props) => props.theme.color.black};
   line-height: 1.5;
 }
