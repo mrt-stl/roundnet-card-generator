@@ -61,7 +61,6 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: ${(props) => props.theme.color.darkBlue};
   font-weight: 400;
 }
 
@@ -70,7 +69,7 @@ h3 {
 }
 
 p, a {
-  color: ${(props) => props.theme.color.anthracite};
+  color: ${(props) => props.theme.color.black};
 }
 
 a {

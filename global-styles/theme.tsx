@@ -8,7 +8,7 @@ export const theme: DefaultTheme = {
     color: {
         lionGold: "#CDAB54",
         black: "#143646",
-        anthracite: "#475F62",
+        anthracite: "#f3f3f3",
         white: "#FFFFFF",
     },
     fontSize: {
