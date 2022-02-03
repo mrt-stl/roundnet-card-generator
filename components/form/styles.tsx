@@ -14,6 +14,7 @@ export const ColorPicker = styled.input`
     height: 60px;
     border: none;
     appearance: none;
+    border-radius: 0;
     background-color: ${(props) => props.theme.color.anthracite};
     padding: ${(props) => props.theme.spacing.xs};
     margin-bottom: ${(props) => props.theme.spacing.l};

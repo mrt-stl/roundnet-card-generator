@@ -33,6 +33,8 @@ export const CardContainer = styled.div<{ backdropColor?: string }>`
 export const CardName = styled.p`
     background-color: rgba(255, 255, 255, 0.3);
     width: 100%;
+    padding-left: ${(props) => props.theme.spacing.xs};
+    padding-right: ${(props) => props.theme.spacing.xs};
 `
 
 export const SmallText = styled.span<{ block?: boolean }>`

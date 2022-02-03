@@ -29,5 +29,8 @@ export const Col = styled.section<{ background?: boolean }>`
     @media only screen and (max-width: 768px) {
         flex-basis: 100%;
         max-width: 100%;
+        padding-left: ${props => props.theme.spacing.m};
+        padding-right: ${props => props.theme.spacing.m};
+
     }
 `
