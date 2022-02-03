@@ -37,7 +37,7 @@ html, body {
   height: 100%;
 }
 body {
-  line-height: 1.5;
+  line-height: 0.5 !important;
   -webkit-font-smoothing: antialiased;
 }
 img, picture, video, canvas, svg {
@@ -70,6 +70,7 @@ h3 {
 
 p, a {
   color: ${(props) => props.theme.color.black};
+  line-height: 1.5;
 }
 
 a {
