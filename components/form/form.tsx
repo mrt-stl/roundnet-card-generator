@@ -1,6 +1,6 @@
 import { useState, useEffect, ChangeEvent } from "react"
 import Image from "next/image"
-import { FormContainer, Input, Label, Textarea } from "./styles"
+import { FormContainer, Input, Label, Textarea, ColorPicker } from "./styles"
 import { IData } from "components/generator/generator"
 
 interface IFormProps {
@@ -31,16 +31,16 @@ const Form = ({ setData, data }: IFormProps) => {
         <>
             <FormContainer>
                 <Label>
-                    Bild:
+                    Bild
                     <Input type="file" accept="image/*" name="image" onChange={handleChange} />
                 </Label>
 
                 <Label>
-                    Name:
+                    Name
                     <Input type="text" name="name" onChange={handleChange} value={data.name} />
                 </Label>
                 <Label>
-                    Spitzname:
+                    Spitzname
                     <Input
                         type="text"
                         name="nickname"
@@ -49,11 +49,11 @@ const Form = ({ setData, data }: IFormProps) => {
                     />
                 </Label>
                 <Label>
-                    Beschreibung:
+                    Beschreibung
                     <Textarea name="content" onChange={handleChange} value={data.content} />
                 </Label>
                 <Label>
-                    Angriff:
+                    Angriff
                     <Input
                         type="range"
                         min="0"
@@ -64,7 +64,7 @@ const Form = ({ setData, data }: IFormProps) => {
                     />
                 </Label>
                 <Label>
-                    Verteidigung:
+                    Verteidigung
                     <Input
                         type="range"
                         min="0"
@@ -76,8 +76,8 @@ const Form = ({ setData, data }: IFormProps) => {
                 </Label>
 
                 <Label>
-                    Farbe:
-                    <Input
+                    Farbe
+                    <ColorPicker
                         type="color"
                         name="color"
                         onChange={handleChange}
@@ -86,7 +86,19 @@ const Form = ({ setData, data }: IFormProps) => {
                 </Label>
 
                 <Label>
-                    Bild X:
+                    Bildgröße
+                    <Input
+                        type="range"
+                        min="0"
+                        max="200"
+                        name="imageSize"
+                        onChange={handleChange}
+                        value={data.imageSize}
+                    />
+                </Label>
+
+                <Label>
+                    Bild X
                     <Input
                         type="range"
                         min="0"
@@ -98,7 +110,7 @@ const Form = ({ setData, data }: IFormProps) => {
                 </Label>
 
                 <Label>
-                    Bild Y:
+                    Bild Y
                     <Input
                         type="range"
                         min="0"
@@ -106,18 +118,6 @@ const Form = ({ setData, data }: IFormProps) => {
                         name="imageY"
                         onChange={handleChange}
                         value={data.imageY}
-                    />
-                </Label>
-
-                <Label>
-                    Bildgröße:
-                    <Input
-                        type="range"
-                        min="0"
-                        max="200"
-                        name="imageSize"
-                        onChange={handleChange}
-                        value={data.imageSize}
                     />
                 </Label>
             </FormContainer>
