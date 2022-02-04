@@ -23,8 +23,8 @@ export interface IData {
 const Generator = () => {
     const [data, setData] = useState<IData>({
         image: "",
-        name: "Max Mustermann",
-        nickname: "Roundnet Gorilla",
+        name: "",
+        nickname: "",
         content: "",
         attack: 0,
         defense: 0,

@@ -37,7 +37,7 @@ const imageExport = ({ cardRef }: IImageExportProps) => {
     }
     return (
         <ButtonContainer>
-            <Button onClick={handleDownload}>Export as png</Button>
+            <Button onClick={handleDownload}>Als PNG Speichern</Button>
         </ButtonContainer>
     )
 }
