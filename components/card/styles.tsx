@@ -37,13 +37,23 @@ export const CardName = styled.p`
     padding-right: ${(props) => props.theme.spacing.xs};
 `
 
+export const CardDescription = styled(CardName)<{length: number}>`
+    min-height: 80px;
+    font-size: ${props => props.length > 61 ? (props.length > 80 ? "12px" : "14px") : "16px"};
+`
+
 export const SmallText = styled.span<{ block?: boolean }>`
     display: ${(props) => (props.block ? "block" : null)};
     font-size: ${(props) => props.theme.fontSize.xs};
     font-weight: ${(props) => props.theme.fontWeight.bold};
 `
 
-export const ImageWrapper = styled.div<{ imgSrc?: string, imgX: number, imgY: number, imgSize: number}>`
+export const ImageWrapper = styled.div<{
+    imgSrc?: string
+    imgX: number
+    imgY: number
+    imgSize: number
+}>`
     background-image: ${(props) => (props.imgSrc ? `url(${props.imgSrc})` : null)};
     background-size: ${(props) => props.imgSize}%;
     background-position: ${(props) => props.imgX}% ${(props) => props.imgY}%;

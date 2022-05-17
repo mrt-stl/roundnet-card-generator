@@ -1,5 +1,6 @@
+/* eslint-disable @next/next/no-img-element */
 import Image from "next/image"
-import { ImageWrapper, CardContainer, CardName, Stats, SmallText, LogoWrapper } from "./styles"
+import { ImageWrapper, CardContainer, CardName, Stats, SmallText, LogoWrapper, CardDescription } from "./styles"
 import { IData } from "components/generator/generator"
 
 interface ICardProps {
@@ -12,7 +13,7 @@ const Card = ({ data, imgSrc, cardRef }: ICardProps) => {
     return (
         <CardContainer ref={cardRef} backdropColor={data.color}>
             <LogoWrapper>
-                <Image src="/logo.svg" alt="" layout="fill"/>
+                <img src="/logo.svg" alt=""/>
             </LogoWrapper>
             <CardName>{data.name ? data.name : "Dein Name"}</CardName>
             <CardName>
@@ -21,10 +22,10 @@ const Card = ({ data, imgSrc, cardRef }: ICardProps) => {
             </CardName>
 
             <ImageWrapper imgSrc={imgSrc} imgX={data.imageX} imgY={data.imageY} imgSize={data.imageSize}/>
-            <CardName>
+            <CardDescription length={data.content ? data.content.length : 0}>
                 <SmallText block>Signature Move</SmallText>
                 {data.content ? data.content : "Ist der Block gesetzt, fängt er mehr ab als jeder Spam-Filter"}
-            </CardName>
+            </CardDescription>
             <Stats alignLeft>ATK/ {data.attack}</Stats>
             <Stats>DEF/ {data.defense}</Stats>
         </CardContainer>
