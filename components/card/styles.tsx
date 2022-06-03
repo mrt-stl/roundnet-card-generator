@@ -37,9 +37,9 @@ export const CardName = styled.p`
     padding-right: ${(props) => props.theme.spacing.xs};
 `
 
-export const CardDescription = styled(CardName)<{length: number}>`
+export const CardDescription = styled(CardName)<{ length: number }>`
     min-height: 80px;
-    font-size: ${props => props.length > 61 ? (props.length > 80 ? "12px" : "14px") : "16px"};
+    font-size: ${(props) => (props.length > 61 ? (props.length > 80 ? "12px" : "14px") : "16px")};
 `
 
 export const SmallText = styled.span<{ block?: boolean }>`
@@ -54,12 +54,13 @@ export const ImageWrapper = styled.div<{
     imgY: number
     imgSize: number
 }>`
-    background-image: ${(props) => (props.imgSrc ? `url(${props.imgSrc})` : null)};
-    background-size: ${(props) => props.imgSize}%;
-    background-position: ${(props) => props.imgX}% ${(props) => props.imgY}%;
-    background-repeat: no-repeat;
     width: 100%;
-    aspect-ratio: 1;
+    height: 265px;
+    overflow: hidden;
+    img {
+        transform: translateX(${(props) => props.imgX}px) translateY(${(props) => props.imgY}px)
+            scale(${(props) => props.imgSize / 10}, ${(props) => props.imgSize / 10});
+    }
 `
 
 export const LogoWrapper = styled.div`

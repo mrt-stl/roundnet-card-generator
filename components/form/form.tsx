@@ -89,8 +89,8 @@ const Form = ({ setData, data }: IFormProps) => {
                     Bildgröße
                     <Input
                         type="range"
-                        min="0"
-                        max="200"
+                        min="0.1"
+                        max="100"
                         name="imageSize"
                         onChange={handleChange}
                         value={data.imageSize}
@@ -101,8 +101,8 @@ const Form = ({ setData, data }: IFormProps) => {
                     Bild X
                     <Input
                         type="range"
-                        min="0"
-                        max="100"
+                        min="-200"
+                        max="200"
                         name="imageX"
                         onChange={handleChange}
                         value={data.imageX}
@@ -113,8 +113,8 @@ const Form = ({ setData, data }: IFormProps) => {
                     Bild Y
                     <Input
                         type="range"
-                        min="0"
-                        max="100"
+                        min="-200"
+                        max="200"
                         name="imageY"
                         onChange={handleChange}
                         value={data.imageY}

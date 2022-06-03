@@ -11,7 +11,9 @@ const imageExport = ({ cardRef }: IImageExportProps) => {
         e.preventDefault()
         if (cardRef.current === null) return
 
-        html2canvas(cardRef.current)
+        html2canvas(cardRef.current, {
+            scale: 5,
+        })
             .then((canvas) => {
                 const image = canvas.toDataURL("image/png", 1.0)
                 return image
