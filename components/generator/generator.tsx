@@ -28,9 +28,9 @@ const Generator = () => {
         content: "",
         attack: 0,
         defense: 0,
-        imageX: 50,
-        imageY: 50,
-        imageSize: 100,
+        imageX: 0,
+        imageY: 0,
+        imageSize: 1,
     })
     const [imgSrc, setImgSrc] = useState("")
     const [imgCopy, setImgCopy] = useState(data.image)
