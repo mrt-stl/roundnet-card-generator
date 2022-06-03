@@ -30,7 +30,7 @@ const Generator = () => {
         defense: 0,
         imageX: 0,
         imageY: 0,
-        imageSize: 1,
+        imageSize: 10,
     })
     const [imgSrc, setImgSrc] = useState("")
     const [imgCopy, setImgCopy] = useState(data.image)
